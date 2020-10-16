@@ -1,0 +1,7 @@
+{
+  "name": "alarmapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

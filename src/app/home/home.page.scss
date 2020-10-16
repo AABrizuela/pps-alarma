@@ -1,0 +1,251 @@
+//variables
+
+$wrapper-Samsung :300px;
+
+
+//mixins
+
+@mixin base-samsung {
+  width: 185px;
+  height: 150px;
+
+
+//
+  
+}
+
+.fondo
+{
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  background-image: url(../../assets/img/fondo-alternativo.png);
+  //background-position: 53.3% 62.2%;
+  //opacity: 0.5;
+  //background-size: cover;
+}
+
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.815);
+  height: $wrapper-Samsung;
+  width: $wrapper-Samsung;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  top: 30%;
+  //display: none;
+}
+
+.base {
+  background-color: #bdc3c7;
+  @include base-samsung;
+  border-radius: 30px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  z-index: 100;
+}
+
+.base-bottom {
+  background-color: #bdc3c7;
+  width: 185px;
+  height: 85px;
+  border-radius: 0 0 30px 30px;
+  top: 65px;
+  position: relative;
+  opacity: 0.4;
+}
+
+.lock-cirlce {
+  height: 180px;
+  width: 110px;
+  border-radius: 45px;
+  z-index: 10;
+  background-color: #bdc3c7;
+  position: relative;
+  margin: 0 auto;
+  bottom: 130px;
+}
+
+.lock-circle-inside {
+  height: 180px;
+  width: 50px;
+  border-radius: 30px;
+  z-index: 20;
+  background-color: black;
+  position: relative;
+  margin: 0 auto;
+  top: 25px;
+}
+
+
+
+.lock-inside-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: black;
+  z-index: 300;
+  position: relative;
+  bottom: 60px;
+  left: 65px;
+}
+
+.lock-inside-bottom {
+  width: 30px;
+  height: 80px;
+  background-color: black;
+  z-index: 300;
+  position: relative;
+  bottom: 100px;
+  left: 75px;
+}
+
+#container{
+  position: absolute;
+  top: -5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.877);
+  box-shadow: 1px 1px 50px #000;
+  display: none;
+}
+
+.close-btn{
+  position: absolute;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  top: 3px;
+  right: 3px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 20px;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.253);
+  transition: all 0.2s ease-in-out;
+}
+
+h1{
+  font-family: 'Cyber', sans-serif;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 175%;
+  color: #ddd;
+  text-shadow: 3px 3px 10px #000;
+  
+}
+
+ion-button, input, .lista-usuarios {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 80%;
+  display: block;
+  margin: 9px auto;
+  font-size: 17px;
+  color: rgb(3, 3, 3);
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(255, 255, 255, 0.253);
+  transition: all 0.2s ease-in-out;
+
+  &.lista-usuarios{
+    background: rgb(255, 255, 255);
+  }
+}
+
+ion-input
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 80%;
+  margin: 9px auto;
+  color: rgb(3, 3, 3);
+  padding: 8px;
+  border-radius: 6px;
+  background: rgb(255, 253, 253);
+  transition: all 0.2s ease-in-out;
+  --placeholder-color: black;
+  --placeholder-opacity: 1;
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+}
+
+input:focus{
+  outline: none;
+  box-shadow: 3px 3px 10px rgb(201, 201, 201);
+  background: rgba(255, 255, 255, 0.801);
+}
+
+ion-input:focus
+{
+  background: rgb(255, 253, 253);
+}
+
+
+
+  .btn-login
+{
+    padding: 0px;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    width: 80%;
+}
+
+.notificacion{
+  position:absolute;
+  top:0px;
+  width:100%;
+  height:0px;  
+  box-sizing:border-box;
+  color:white;  
+  text-align:center;
+  background:rgba(255, 0, 0, 0.904);
+  overflow:hidden;
+  box-sizing:border-box;
+  transition:height .2s;
+}
+
+#notificacion:before {
+  display:block;
+  margin-top:15px; 
+}
+
+.active{
+  height: 50px;
+}
+
+.error-mail:before {
+  Content: "Mail invalido";
+}
+
+.error-password:before {
+  Content: "Usuario o contraseña incorrectos";
+}
+
+.loading{
+  opacity: 0.5;
+}
+
+.spinner {
+  --color: white;
+  z-index:9000;
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  display: none;
+}
+
+.backdrop {
+  z-index: 900;
+}

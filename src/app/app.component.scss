@@ -1,0 +1,83 @@
+$barColor: #f5f5f5;
+$mainColor: #2b77e9;
+
+
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    background: black;
+}
+
+.container-splash {
+    --background: none;
+    background: url(../assets/img/fondo-alternativo.png);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.splash {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+
+    
+}
+
+.alarm {
+    opacity: 0;
+    animation-name: alarm;
+    animation-delay: 6s;
+    animation-duration: 3s;
+
+    @keyframes alarm {
+        0% {opacity: 0;}
+        //60%{opacity: 0.1;}
+        100%{opacity: 1;}
+    } 
+}
+
+.cell {
+    width: 90%;
+    height: 45%;
+}
+
+.bar{
+    position: absolute;
+    top: 80%;
+    background-color: $barColor;
+    height: 20px;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: 7px 0;
+    box-shadow: 0px 0px 50px 26px rgba(0,0,0,0.75);
+    .progress{
+      height: 20px;
+      //background-color: $mainColor;
+      background: linear-gradient(to right, rgb(102,140,255) 0%, rgb(46,102,255) 12%, rgb(0,66,219) 50%, rgb(46,102,255) 82%, rgb(102,140,255) 100%);
+      border-radius: 5px 0 0;
+      animation-name: animateBar;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in;
+      animation-duration: 6s;
+      width: 100%;
+    }
+    @keyframes animateBar {
+      0% {transform: translateX(-100%)}
+      100% {transform: translateX(0)}
+    }
+
+    
+}
+
+ 

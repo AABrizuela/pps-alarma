@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="lock-container">
+    <div class="cierre"></div>
+    <div class="relleno"></div>
+    <div class="lock">
+      <div class="keyhole">
+
+      </div>
+    </div>
+  </div>
+  <div class="container-toggle">
+    <div class="holder off" id="holder" (click)="toggle()">
+      <div class="toggle"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="validacion-pass">
+  <p class="titulo-validacion">Ingrese contraseña:</p>
+  <input type="password" class="input-desbloqueo" placeholder="Ingrese contraseña">
+  <div class="boton-desbloquear" (click)="validarDesbloqueo()">
+    <span>Desbloquear</span>
+  </div>
+</div>

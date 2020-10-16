@@ -1,0 +1,45 @@
+<div class="fondo">
+  <ion-backdrop class="backdrop"></ion-backdrop>
+  <ion-spinner name="crescent" duration=500 class="spinner"></ion-spinner>
+  <div class="wrapper" id="login-button" (click)="Open()">
+    <div class="base">
+      <div class="base-bottom">
+      </div>
+      <div class="lock-inside-top">
+      </div>
+      <div class="lock-inside-bottom">
+      </div>
+    </div>
+
+    <div class="lock-cirlce">
+      <div class="lock-circle-inside">
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="container" >
+    <h1>Ingresar</h1>
+    <span class="close-btn" (click)="Close()">
+      <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png">
+    </span>
+    <form (ngSubmit) = "Login()">
+      <ion-input class="input-user" id="correo" [(ngModel)]='mail' type="text" clear-input placeholder="Correo electronico" maxlength="35" name="mail" value=""></ion-input>
+      <ion-input class="input-pass" id="pass" [(ngModel)]='password' type="password" clear-input placeholder="Contraseña" maxlength="25" name="password" (keyup.enter)="Login()"></ion-input>
+
+      <ion-button class="btn-login" id="loginButton" color="light" type="submit" [disabled]="mail === '' || password.length < 4 " >Entrar</ion-button>
+
+      <select (change)="completar()" id="select" class="lista-usuarios">
+        <option  selected hidden>Seleccione un usuario</option>
+        <option  *ngFor="let usuario of usuarios | async" [value]="usuario.correo">
+          {{usuario.correo}}
+      </option>
+      </select>
+    </form>
+
+  </div>
+
+  <div class="notificacion" id="notificacion">
+
+  </div>
+
+</div>
